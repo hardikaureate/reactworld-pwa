@@ -1,2 +1,1 @@
 # reactworld
-# reactworld-pwa
