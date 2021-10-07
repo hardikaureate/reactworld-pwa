@@ -8,14 +8,17 @@ this.addEventListener("install", (event) => {
                 "https://pro.fontawesome.com/releases/v5.10.0/css/all.css",
                 "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css",
                 "/favicon.ico",
-                "/images/",
-                "/assets/",
                 "https://staticw2.yotpo.com/bajsmlDmBFXvsTGz0wfL4NBwKL6WUaMyH52aYwBi/widget.js",
                 "/static/js/vendors~main.chunk.js",
                 "/static/js/bundle.js",
                 "/static/js/main.chunk.js",
                 "/static/js/0.chunk.js",
                 "/index.html",
+                "/*.css",
+                "/*.js",
+                "/assets/**",
+                "/images/**",
+                "/*.(eot|svg|cur|jpg|png|jpeg|gif|otf|ttf|woff|woff2|ani)",
                 "/about",
                 "/portfolio",
                 "/shop",
@@ -35,7 +38,7 @@ this.addEventListener("fetch", (event) => {
                 if (result) {
                     return result
                 }
-                let requestUrl=event.request.clone()
+                let requestUrl = event.request.clone()
                 return fetch(requestUrl)
             })
         )
