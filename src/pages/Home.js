@@ -6,6 +6,7 @@ import LazyLoad from 'react-lazyload'
 //import MegaSlider from '../components/MegaSlider';
 import PDPRelatedProduct from '../components/slider/PDPRelatedProduct';
 import RegisterForm from '../components/RegisterForm';
+import Counter from '../components/Counter';
 //import DupForm from '../components/DupForm';
 //import HomeTextBanner from '../components/HomeTextBanner';
 
@@ -33,6 +34,7 @@ const Home = () => {
                     <PDPRelatedProduct title="Sacheu Beauty Products" />
                     {/* <HomeTextBanner /> */}
                 </LazyLoad>
+                <Counter />
                 <LazyLoad height={500}>
                     {/* <!-- Contact --> */}
                     <RegisterForm />

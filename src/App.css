@@ -4895,3 +4895,8 @@ section.github--profile h3.gitblocktitle {
     letter-spacing: 0.0625rem;
     color: #fff;
 }
+
+.numberCounter h2,
+.numberCounter p {
+    text-align: center;
+}
