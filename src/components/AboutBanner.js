@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import Modal from './model/Model'
+//import Modal from './model/Model'
 
 const AboutBanner = () => {
-    const [show, setShow] = useState(false);
+    //const [show, setShow] = useState(false);
     return (
         <>
             <div id="wrapper">

@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from 'react'
-import { Flex, Icon, Image, Box, Badge } from '@chakra-ui/react'
+import { Icon, Box, Badge } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 import { ShopContext } from '../context/ShopContext';
-import { MdMenu, MdShoppingCart } from 'react-icons/md'
+import { MdShoppingCart } from 'react-icons/md'
 
 const Header = () => {
     const width = window.innerWidth

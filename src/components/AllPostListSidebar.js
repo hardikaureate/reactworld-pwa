@@ -12,7 +12,7 @@ const AllPostListSidebar = () => {
                     allblog.data.slice(2, 8).map((items, i) => {
                         localStorage.setItem("AllBlogs",JSON.stringify(items))
                         return (
-                            <div className="allpostlist">
+                            <div className="allpostlist" key={i}>
                                 <div className="rpimage">
                                     <img src={`/${items.blogImage}`} alt="img" />
                                 </div>

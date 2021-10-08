@@ -14,7 +14,7 @@ const uniqueList = [
 //console.log(uniqueList)
 
 const AllProject = () => {
-  const [loading, setLoading] = useState(true)
+//  const [loading, setLoading] = useState(true)
   const [projectData, setMenuData] = useState(Projectlist)
   const [menuList, setMenuList] = useState(uniqueList)
 

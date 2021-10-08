@@ -31,10 +31,10 @@ const PostLarge = () => {
                                     allblog.data.map((items, i) => {
                                         return (
                                             <>
-                                                <div className="blogpostList">
+                                                <div className="blogpostList" key={i}>
                                                     <div className="mainblogimage">
                                                         <Link to={`post/${items.slug}`}>
-                                                            <img src={items.blogImage} alt="img" srcset="" />
+                                                            <img src={items.blogImage} alt="img" />
                                                         </Link>
                                                     </div>
                                                     <div className="blogmetainfo">

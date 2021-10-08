@@ -36,7 +36,7 @@ const PostGrid = () => {
                                                 <div class="col-4 blog-post mobblog">
                                                     <div class="header-thumbnail">
                                                         <Link class="blog__img" to={`post/${items.slug}`}>
-                                                            <img className="blogpageimage" src={items.blogImage} />
+                                                            <img className="blogpageimage" src={items.blogImage} alt="img"/>
                                                         </Link>
                                                     </div>
                                                     <div class="entry-header blog__content">
