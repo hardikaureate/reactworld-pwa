@@ -5,7 +5,7 @@ import Skeleton from 'react-loading-skeleton'
 import { Box, Image } from '@chakra-ui/react'
 import '../assets/CSS/shoppage.css'
 const ShopProducts = () => {
-    const { fetchAllProducts, products, addItemToCheckout } = useContext(ShopContext)
+    const { fetchAllProducts, products, addItemToCheckout, product } = useContext(ShopContext)
     const [loading, setLoading] = useState(true);
     useEffect(() => {
         setTimeout(() => setLoading(false), 2000);
@@ -14,14 +14,15 @@ const ShopProducts = () => {
         let allpros= localStorage.getItem("allproducts")
         setLoading(JSON.parse(allpros))
     }, [fetchAllProducts])
-    //console.log('Shop-Products', products)
+    console.log('Shop-Products', products)
 
-    // let extractedInfo = "";
-    // if (product.id) {
-    //     const buff = Buffer.from(product?.id, 'base64');
-    //     const decodedId = buff.toString('ascii');
-    //     extractedInfo = decodedId.split(/[\s/]+/).pop();
-    // }
+    let extractedInfo = "";
+    /*if (products.id) {
+        const buff = Buffer.from(products?.id, 'base64');
+        const decodedId = buff.toString('ascii');
+        extractedInfo = decodedId.split(/[\s/]+/).pop();
+    }*/
+    //console.log(products[0].id)
 
     if (!products) return <div><div class="loading">Loading&#8230;</div></div>
 
@@ -29,9 +30,9 @@ const ShopProducts = () => {
         <>
             <Box>
                 <div className="product-listing">
-                    {products.map((product, i) => (
+                    {products.map((product) => (
                         <>
-                            <div className="itemBox" key={i}>
+                            <div className="itemBox" key={product.id}>
                                 <div className="item">
                                     {product.variants[0].compareAtPrice > product.variants[0].price ? (<span className="sale">SALE</span>) : (<span></span>)}
                                     <div className="imageContainer">

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import { Image, Button, Text } from "@chakra-ui/react"
+import { Image, Button } from "@chakra-ui/react"
 import '../../assets/CSS/productpage.css'
 import './relatedproduct.css'
 import Slider from "react-slick"
@@ -81,9 +81,8 @@ const PDPRelatedProduct = (props) => {
                             {loading ? <Skeleton height={30} /> : `${product.variants[0].price}`}
                           </p>
                           <div style={{ textAlign: 'center' }} className="">
-                            <div class="yotpo bottomLine" data-product-id="4746070032433" style={{ display: 'inline-block' }}></div>
+                            <div class="yotpo bottomLine" data-product-id={extractedInfo} style={{ display: 'inline-block' }}></div>
                           </div>
-
                           {loading ? <Skeleton height={42} /> : <Button mt="3%" className="cartButton" onClick={() => addItemToCheckout(product.variants[0].id, 1)}>Add To Cart</Button>}
                         </div>
                       </div>

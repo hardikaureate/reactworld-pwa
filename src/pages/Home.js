@@ -1,6 +1,6 @@
 import React, { Suspense } from 'react';
 import Homebanner from '../components/Homebanner'
-import HomeContact from '../components/HomeContact'
+//import HomeContact from '../components/HomeContact'
 import InnerMenu from '../components/InnerMenu'
 import LazyLoad from 'react-lazyload'
 //import MegaSlider from '../components/MegaSlider';
