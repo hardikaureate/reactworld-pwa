@@ -14,11 +14,12 @@ this.addEventListener("install", (event) => {
                 "/static/js/main.chunk.js",
                 "/static/js/0.chunk.js",
                 "/index.html",
-                "/*.css",
-                "/*.js",
-                "/assets/**",
-                "/images/**",
-                "/*.(eot|svg|cur|jpg|png|jpeg|gif|otf|ttf|woff|woff2|ani)",
+                // "/*.css",
+                // "/*.js",
+                "images/MERN.jpg",
+                "/images/MERN.jpg",
+                "/images/vision.jpg",
+                "/images/pro1.jpeg",
                 "/about",
                 "/portfolio",
                 "/shop",
@@ -29,6 +30,7 @@ this.addEventListener("install", (event) => {
         })
     )
 })
+
 
 /* When Network Offline, all caches data view from here */
 this.addEventListener("fetch", (event) => {
