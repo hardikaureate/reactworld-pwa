@@ -1588,6 +1588,9 @@ hr.major {
     ul.copyright li {
         font-size: 16px !important;
     }
+    span.image.fit.bioimage {
+        padding: 30px 0px !important;
+    }
 }
 
 @media screen and (max-width: 480px) {
