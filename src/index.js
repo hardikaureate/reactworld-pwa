@@ -4,7 +4,7 @@ import './index.css';
 import App from './App';
 import {ChakraProvider} from '@chakra-ui/react'
 import ShopProvider from './context/ShopContext';
-//import swDev from './swDev'
+import swDev from './swDev'
 
 
 ReactDOM.render(
@@ -18,4 +18,4 @@ ReactDOM.render(
   document.getElementById('root')
 );
 
-//swDev()
+swDev()

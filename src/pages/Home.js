@@ -19,26 +19,26 @@ const Home = () => {
         <div>
             <Suspense fallback={<div style={{ position: 'fixed', left: '0%', top: '0%', zIndex: '9999', backgroundColor: 'lavender', width: '100%', height: '100%' }}>
             </div>}>
-                <LazyLoad height={500}>
+                <Homebanner />
+                <InnerMenu />
+                <PDPRelatedProduct title="Sacheu Beauty Products" />
+                {/* <LazyLoad height={500}>
                     <Homebanner />
-                </LazyLoad>
+                </LazyLoad> */}
                 {/* <LazyLoad height={500}>
                 <MegaSlider />
             </LazyLoad> */}
-                <LazyLoad height={500}>
-                    {/* <!-- Main --> */}
+                {/* <LazyLoad height={500}>
                     <InnerMenu />
-                </LazyLoad>
-                <LazyLoad height={500}>
-                    {/* <!-- Contact --> */}
+                </LazyLoad> */}
+                {/* <LazyLoad height={500}>
                     <PDPRelatedProduct title="Sacheu Beauty Products" />
-                    {/* <HomeTextBanner /> */}
-                </LazyLoad>
+                </LazyLoad> */}
                 <Counter />
-                <LazyLoad height={500}>
-                    {/* <!-- Contact --> */}
+                <RegisterForm />
+                {/* <LazyLoad height={500}>
                     <RegisterForm />
-                </LazyLoad>
+                </LazyLoad> */}
             </Suspense>
         </div>
     )
