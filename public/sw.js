@@ -6,7 +6,7 @@ this.addEventListener("install", (event) => {
         caches.open(cacheData).then((cache) => {
             cache.addAll([
                 "https://pro.fontawesome.com/releases/v5.10.0/css/all.css",
-                "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css",
+                //"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css",
                 "/favicon.ico",
                 "https://staticw2.yotpo.com/bajsmlDmBFXvsTGz0wfL4NBwKL6WUaMyH52aYwBi/widget.js",
                 "/static/js/vendors~main.chunk.js",
