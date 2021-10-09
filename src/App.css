@@ -4917,7 +4917,7 @@ section.github--profile h3.gitblocktitle {
 }
 
 .error h1>span {
-    text-shadow: 2px 2px 0px #da0, -2px -2px 0px #da0, 0px 0px 8px #ff8700;
+    text-shadow: 2px 2px 0px rgb(255, 0, 0), -2px -2px 0px rgb(255, 0, 0), 0px 0px 8px #ff0800;
     margin-bottom: 30px;
 }
 
@@ -4936,4 +4936,8 @@ section.github--profile h3.gitblocktitle {
 
 h2.nfhomeLink {
     padding-bottom: 40px;
+}
+
+.errorpage a {
+    border: none;
 }
