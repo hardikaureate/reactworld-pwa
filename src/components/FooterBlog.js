@@ -12,14 +12,12 @@ const FooterBlog = () => {
                     {
                         allblog.data.slice(2, 8).map((items, i) => {
                             return (
-
                                 <div className="footerallpostlist" key={i}>
                                     <div className="footertitledate">
                                         <div className="footerrptitle"><Link to={`/post/${items.slug}`}>{items.blogTitle}</Link></div>
                                         <div className="footerrpdate">{items.postedOn}</div>
                                     </div>
                                 </div>
-
                             )
                         })}
                 </div>  
