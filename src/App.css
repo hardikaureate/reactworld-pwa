@@ -1592,6 +1592,12 @@ hr.major {
     span.image.fit.bioimage {
         padding: 30px 0px !important;
     }
+    .errorpage .error h1 {
+        font-size: 160px !important;
+    }
+    .errorpage {
+        margin-bottom: 30px !important;
+    }
 }
 
 @media screen and (max-width: 480px) {
@@ -4899,4 +4905,35 @@ section.github--profile h3.gitblocktitle {
 .numberCounter h2,
 .numberCounter p {
     text-align: center;
+}
+
+.error h1 {
+    color: #222;
+    font-size: 220px !important;
+    letter-spacing: 10px;
+    margin: 0px;
+    font-weight: 700;
+    text-shadow: 2px 2px 0px #c9c9c9, -2px -2px 0px #c9c9c9;
+}
+
+.error h1>span {
+    text-shadow: 2px 2px 0px #da0, -2px -2px 0px #da0, 0px 0px 8px #ff8700;
+    margin-bottom: 30px;
+}
+
+.errorpage {
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: middle;
+    align-content: center;
+    align-items: center;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    justify-content: center;
+}
+
+h2.nfhomeLink {
+    padding-bottom: 40px;
 }

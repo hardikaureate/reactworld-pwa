@@ -3,7 +3,7 @@ import './App.css';
 import './animate.css'
 import {
   BrowserRouter as Router,
-  Route,
+  Route, Switch
 } from "react-router-dom";
 import ScrollToTop from './components/ScrollToTop';
 import Header from './components/Header';
@@ -18,12 +18,13 @@ import MainShop from './pages/MainShop';
 import Cart from './shop_component/Cart';
 import ParentProductPage from './shop_component/ParentProductPage';
 import Documentation from './components/Documentation';
+import NotFound from './components/NotFound';
 //import CategoryPost from './components/CategoryPost';
 
 
 function App() {
   const [loading, setLoading] = useState(true)
-  useEffect(() => {setTimeout(() => setLoading(false), 1000)}, [])
+  useEffect(() => { setTimeout(() => setLoading(false), 1000) }, [])
   if (loading) return <div><div class="loading">Loading&#8230;</div></div>
   return (
     <div className="App">
@@ -31,36 +32,40 @@ function App() {
         <ScrollToTop>
           <Header />
           <Cart />
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/portfolio" exact>
-            <Portfolio />
-          </Route>
-          <Route path="/about" exact>
-            <About />
-          </Route>
-          <Route path="/contact" exact>
-            <Contact />
-          </Route>
-          <Route path="/post/:slug" exact>
-            <BlogDetailsPage />
-          </Route>
-          {/* <Route path="/category/:slug" exact>
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/portfolio" exact>
+              <Portfolio />
+            </Route>
+            <Route path="/about" exact>
+              <About />
+            </Route>
+            <Route path="/contact" exact>
+              <Contact />
+            </Route>
+            <Route path="/post/:slug" exact>
+              <BlogDetailsPage />
+            </Route>
+            {/* <Route path="/category/:slug" exact>
           <CategoryPost />
         </Route> */}
-          <Route path="/products/:handle" exact>
-            <ParentProductPage />
-          </Route>
-          <Route path="/post/" exact>
-            <AllPosts />
-          </Route>
-          <Route path="/shop" exact>
-            <MainShop />
-          </Route>
-          <Route path="/doc" exact>
-            <Documentation />
-          </Route>
+            <Route path="/products/:handle" exact>
+              <ParentProductPage />
+            </Route>
+            <Route path="/post/" exact>
+              <AllPosts />
+            </Route>
+            <Route path="/shop" exact>
+              <MainShop />
+            </Route>
+            <Route path="/doc" exact>
+              <Documentation />
+            </Route>
+            <Route path="" component={NotFound} />
+            {/* <Route component={() => (<div>404 Not found </div>)} /> */}
+          </Switch>
           <Footer />
         </ScrollToTop>
       </Router>
