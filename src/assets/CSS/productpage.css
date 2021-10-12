@@ -494,11 +494,12 @@ input.cartInputText {
 
 .bigprolist {
     display: grid;
-    grid-gap: 1px;
+    grid-gap: 10px;
     grid-template-columns: repeat(2, minmax(1px, 100%));
     padding-left: 10px;
     list-style: none;
     padding-right: 10px;
+    padding-top: 10px;
 }
 
 img.prodmetaImages {
