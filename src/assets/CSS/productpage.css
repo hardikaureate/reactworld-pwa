@@ -98,7 +98,7 @@ body {
 .productImage .productImg {
     align-items: flex-start;
     margin: 0 auto;
-    padding: 10px;
+    padding: 10px 10px 1px 10px;
 }
 
 .PDP_cartprice {
@@ -475,4 +475,34 @@ input.cartInputText {
     .Container.cartInput button {
         padding: 20px !important;
     }
+    .cartgroup .cartQuantityInput input[type=text] {
+        width: 26px;
+    }
+    .productImage .productImg {
+        padding: 0;
+    }
+    .bigprolist {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        padding-top: 4px;
+        grid-gap: 4px !important;
+    }
+    .inner.pdppage {
+        padding-top: 0px !important;
+    }
+}
+
+.bigprolist {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(2, minmax(1px, 100%));
+    padding-left: 10px;
+    list-style: none;
+    padding-right: 10px;
+}
+
+img.prodmetaImages {
+    width: 100%;
+    object-fit: cover;
+    vertical-align: middle;
 }

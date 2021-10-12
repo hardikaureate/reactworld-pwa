@@ -45,6 +45,17 @@ const ProductPage = () => {
         autoplaySpeed: 500,
         focusOnSelect: true,
     }
+    const mobsettings = {
+        dots: false,
+        arrows: false,
+        infinite: true, vertical: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 3000,
+        autoplaySpeed: 200,
+        focusOnSelect: true,
+    }
 
     if (!product.title) return <div><div class="loading">Loading&#8230;</div></div>
     //if (!product.title) return <div><div class="spinner"><div class="spinner spinner2"><div class="spinner spinner3"></div></div></div></div>
@@ -59,23 +70,44 @@ const ProductPage = () => {
                             <Grid className="productMobile" templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]} m="auto">
 
                                 <div className="proLeft productImage">
-                                    <div className="imageThumbnail">
-                                        {/* {product.images && product.images.map((item, i) => {
+                                    {/* <div className="imageThumbnail">
+                                         {product.images && product.images.map((item, i) => {
                                                 return loading ? <Skeleton width={90} height={70} /> : <Image key={i} onClick={() => setImageclick(i)} className="productMainImage" src={item && item.src} width="10%" height="auto" />
-                                            })} */}
+                                            })} 
 
                                         <Slider {...settings}>
                                             {product.images && product.images.map((item, index) => {
                                                 return loading ? <Skeleton width={90} height={70} /> : <Image key={index} src={item && item.src} alt="sacheu" onClick={() => setImageclick(index)} className="prodmetaImages" />
                                             })}
                                         </Slider>
-                                    </div>
-                                    <Flex className="productImg" justifyContent="center" alignItems="center">
-                                        {width < 767 ? (loading ? <Skeleton width={343} height={365} /> : <Image src={product.images[imageclick].src} />)
-                                            : (loading ? <Skeleton width={650} height={600} /> : <Image src={product.images[imageclick].src} />)
+                                    </div> */}
+                                    <div className="imagewithmetaimage">
+
+                                        {width > 767 ? (
+                                            <>
+                                                <Flex className="productImg" justifyContent="center" alignItems="center">
+                                                    {width < 767 ? (loading ? <Skeleton width={343} height={365} /> : <Image src={product.images[imageclick].src} />)
+                                                        : (loading ? <Skeleton width={650} height={600} /> : <Image src={product.images[imageclick].src} />)
+                                                    }
+                                                </Flex>
+                                                <div className="bigprolist">
+                                                    {product.images && product.images.map((item, index) => {
+                                                        return loading ? <Skeleton width={90} height={70} /> : <Image key={index} src={item && item.src} alt="sacheu" onClick={() => setImageclick(index)} className="prodmetaImages" />
+                                                    })}
+                                                </div>
+                                            </>
+                                        )
+                                            :
+                                            <Slider {...mobsettings}>
+                                                {product.images && product.images.map((item, index) => {
+                                                    return loading ? <Skeleton width={90} height={70} /> : <Image key={index} src={item && item.src} alt="sacheu" onClick={() => setImageclick(index)} className="prodmetaImages" />
+                                                })}
+                                            </Slider>
                                         }
-                                    </Flex>
+
+                                    </div>
                                 </div>
+
 
                                 <Flex flexDirection="column" justifyContent="center" px="2rem" className="pdpmeta">
                                     <Heading pb="2rem" className="PDP_productTitle">

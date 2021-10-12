@@ -19,6 +19,7 @@ import Cart from './shop_component/Cart';
 import ParentProductPage from './shop_component/ParentProductPage';
 import Documentation from './components/Documentation';
 import NotFound from './components/NotFound';
+import SacheuShopProducts from './shop_component/SacheuShopProducts';
 //import CategoryPost from './components/CategoryPost';
 
 
@@ -59,6 +60,9 @@ function App() {
             </Route>
             <Route path="/shop" exact>
               <MainShop />
+            </Route>
+            <Route path="/sacheushop" exact>
+              <SacheuShopProducts />
             </Route>
             <Route path="/doc" exact>
               <Documentation />
