@@ -6,6 +6,8 @@ import { Grid, Image, Text, Heading, Flex } from '@chakra-ui/react'
 import Skeleton from 'react-loading-skeleton'
 import NumberInput from './NumberInput'
 import Slider from "react-slick"
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 const ProductPage = () => {
     const width = window.innerWidth
@@ -87,7 +89,7 @@ const ProductPage = () => {
                                             <>
                                                 <Flex className="productImg" justifyContent="center" alignItems="center">
                                                     {width < 767 ? (loading ? <Skeleton width={343} height={365} /> : <Image src={product.images[imageclick].src} />)
-                                                        : (loading ? <Skeleton width={650} height={600} /> : <Image src={product.images[imageclick].src} />)
+                                                        : (loading ? <Skeleton width={650} height={600} /> : <Zoom zoomMargin={6} isZoomed={true} overlayBgColorStart={'rgba(36, 41, 67, 0.15)'} overlayBgColorEnd={'rgba(36, 41, 67, 0.85)'}><Image src={product.images[imageclick].src} /></Zoom>)
                                                     }
                                                 </Flex>
                                                 <div className="bigprolist">
@@ -100,7 +102,7 @@ const ProductPage = () => {
                                             :
                                             <Slider {...mobsettings}>
                                                 {product.images && product.images.map((item, index) => {
-                                                    return loading ? <Skeleton width={90} height={70} /> : <Image key={index} src={item && item.src} alt="sacheu" onClick={() => setImageclick(index)} className="prodmetaImages" />
+                                                    return loading ? <Skeleton width={90} height={70} /> : <Zoom overlayBgColorStart={'rgba(36, 41, 67, 0.15)'} overlayBgColorEnd={'rgba(36, 41, 67, 0.85)'}><Image key={index} src={item && item.src} alt="sacheu" onClick={() => setImageclick(index)} className="prodmetaImages" /></Zoom>
                                                 })}
                                             </Slider>
                                         }
