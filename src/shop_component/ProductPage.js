@@ -50,12 +50,15 @@ const ProductPage = () => {
     const mobsettings = {
         dots: false,
         arrows: false,
-        infinite: true, vertical: true,
+        infinite: true, 
+        vertical: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
         speed: 3000,
-        autoplaySpeed: 200,
+        fade:true,
+        cssEase: 'linear',
+        autoplaySpeed: 3000,
         focusOnSelect: true,
     }
 
