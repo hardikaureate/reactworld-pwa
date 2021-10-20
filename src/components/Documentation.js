@@ -108,6 +108,10 @@ const Documentation = () => {
                                                 <td>Item22</td>
                                                 <td>Suspense with Fallback</td>
                                             </tr>
+                                            <tr>
+                                                <td>Item23</td>
+                                                <td>JSON Data</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -122,10 +126,7 @@ const Documentation = () => {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Item23</td>
-                                                <td>JSON Data</td>
-                                            </tr>
+                                            
                                             <tr>
                                                 <td>Item24</td>
                                                 <td>Top Scroll on Page Load/Refresh/Render</td>
