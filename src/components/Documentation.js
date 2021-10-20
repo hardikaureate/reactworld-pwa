@@ -210,6 +210,10 @@ const Documentation = () => {
                                                 <td>Item44</td>
                                                 <td>Google Login with React</td>
                                             </tr>
+                                            <tr>
+                                                <td>Item45</td>
+                                                <td>Hide Code from Dev Tools</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
