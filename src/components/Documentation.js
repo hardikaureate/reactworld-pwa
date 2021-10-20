@@ -206,6 +206,10 @@ const Documentation = () => {
                                                 <td>Item43</td>
                                                 <td>React 404 Page Not Found</td>
                                             </tr>
+                                            <tr>
+                                                <td>Item44</td>
+                                                <td>Google Login with React</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
