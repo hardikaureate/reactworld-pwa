@@ -4941,3 +4941,16 @@ h2.nfhomeLink {
 .errorpage a {
     border: none;
 }
+
+.table-wrapper.googleuserinfo tbody tr td {
+    vertical-align: middle;
+}
+
+.inner.googleuserTitle h3,
+.inner.googleuserTitle .name {
+    text-align: center;
+}
+
+.inner.googleuserTitle button span {
+    color: #fff;
+}

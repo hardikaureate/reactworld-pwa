@@ -100,7 +100,14 @@ const Documentation = () => {
                                                 <td>Item20</td>
                                                 <td>React Icons</td>
                                             </tr>
-
+                                            <tr>
+                                                <td>Item21</td>
+                                                <td>Skeleton</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item22</td>
+                                                <td>Suspense with Fallback</td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -115,14 +122,6 @@ const Documentation = () => {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Item21</td>
-                                                <td>Skeleton</td>
-                                            </tr>
-                                            <tr>
-                                                <td>Item22</td>
-                                                <td>Suspense with Fallback</td>
-                                            </tr>
                                             <tr>
                                                 <td>Item23</td>
                                                 <td>JSON Data</td>
@@ -194,6 +193,18 @@ const Documentation = () => {
                                             <tr>
                                                 <td>Item40</td>
                                                 <td>Form Validation</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item41</td>
+                                                <td>React Counter</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item42</td>
+                                                <td>React Image Zoom</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item43</td>
+                                                <td>React 404 Page Not Found</td>
                                             </tr>
                                         </tbody>
                                     </table>

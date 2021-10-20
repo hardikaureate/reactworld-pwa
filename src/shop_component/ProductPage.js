@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext } from 'react'
 import { useParams } from 'react-router-dom'
-import './../assets/CSS/productpage.css'
+//import './../assets/CSS/productpage.css'
 import { ShopContext } from '../context/ShopContext'
 import { Grid, Image, Text, Heading, Flex } from '@chakra-ui/react'
 import Skeleton from 'react-loading-skeleton'
@@ -8,10 +8,12 @@ import NumberInput from './NumberInput'
 import Slider from "react-slick"
 import Zoom from 'react-medium-image-zoom'
 import 'react-medium-image-zoom/dist/styles.css'
+import '../components/slider/relatedproduct.css'
+
 
 const ProductPage = () => {
     const width = window.innerWidth
-    console.log(width)
+    //console.log(width)
     const { handle } = useParams()
     const { fetchProductWithHandle, addItemToCheckout, product } = useContext(ShopContext)
     useEffect(() => {
@@ -48,19 +50,26 @@ const ProductPage = () => {
         focusOnSelect: true,
     }
     const mobsettings = {
-        dots: false,
-        arrows: false,
-        infinite: true, 
-        vertical: true,
+        dots: true,
+        arrows: true,
+        infinite: true,
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 3000,
-        fade:true,
-        cssEase: 'linear',
-        autoplaySpeed: 3000,
-        focusOnSelect: true,
+        lazyLoad: true,
+        speed: 5000,
+        autoplaySpeed: 1000,
+        responsive: [
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                }
+            }
+        ]
     }
+
 
     if (!product.title) return <div><div class="loading">Loading&#8230;</div></div>
     //if (!product.title) return <div><div class="spinner"><div class="spinner spinner2"><div class="spinner spinner3"></div></div></div></div>
@@ -75,42 +84,65 @@ const ProductPage = () => {
                             <Grid className="productMobile" templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]} m="auto">
 
                                 <div className="proLeft productImage">
-                                    {/* <div className="imageThumbnail">
-                                         {product.images && product.images.map((item, i) => {
-                                                return loading ? <Skeleton width={90} height={70} /> : <Image key={i} onClick={() => setImageclick(i)} className="productMainImage" src={item && item.src} width="10%" height="auto" />
-                                            })} 
+                                    <div className="imageThumbnail">
+                                        {/* {product.images && product.images.map((item, i) => {
+                                            return loading ? <Skeleton width={90} height={70} /> : <Image key={i} onClick={() => setImageclick(i)} className="productMainImage" src={item && item.src} width="10%" height="auto" />
+                                        })} */}
 
                                         <Slider {...settings}>
                                             {product.images && product.images.map((item, index) => {
                                                 return loading ? <Skeleton width={90} height={70} /> : <Image key={index} src={item && item.src} alt="sacheu" onClick={() => setImageclick(index)} className="prodmetaImages" />
                                             })}
                                         </Slider>
-                                    </div> */}
-                                    <div className="imagewithmetaimage">
-
-                                        {width > 767 ? (
+                                    </div>
+                                    <Flex className="productImg" justifyContent="center" alignItems="center">
+                                        {width < 767 ? (loading ? <Skeleton width={343} height={365} /> : <Image src={product.images[imageclick].src} />)
+                                            : (loading ? <Skeleton width={650} height={600} /> : <Zoom zoomMargin={6} isZoomed={true} overlayBgColorStart={'rgba(36, 41, 67, 0.15)'} overlayBgColorEnd={'rgba(36, 41, 67, 0.85)'}><Image src={product.images[imageclick].src} /></Zoom>)
+                                        }
+                                    </Flex>
+                                    {/* <div>
+                                        {width > 767
+                                            ?
+                                            (
+                                                <>
+                                                    <Flex className="productImg" justifyContent="center" alignItems="center">
+                                                        {width < 767 ? (loading ? <Skeleton width={343} height={365} /> : <Image src={product.images[imageclick].src} />)
+                                                            : (loading ? <Skeleton width={650} height={600} /> : <Zoom zoomMargin={6} isZoomed={true} overlayBgColorStart={'rgba(36, 41, 67, 0.15)'} overlayBgColorEnd={'rgba(36, 41, 67, 0.85)'}><Image src={product.images[imageclick].src} /></Zoom>)
+                                                        }
+                                                    </Flex>
+                                                    <div className="bigprolist">
+                                                        {product.images && product.images.map((item, index) => {
+                                                            return loading ? <Skeleton width={90} height={70} /> : <Image key={index} src={item && item.src} alt="sacheu" onClick={() => setImageclick(index)} className="prodmetaImages" />
+                                                        })}
+                                                    </div>
+                                                </>
+                                            )
+                                            :
                                             <>
-                                                <Flex className="productImg" justifyContent="center" alignItems="center">
-                                                    {width < 767 ? (loading ? <Skeleton width={343} height={365} /> : <Image src={product.images[imageclick].src} />)
-                                                        : (loading ? <Skeleton width={650} height={600} /> : <Zoom zoomMargin={6} isZoomed={true} overlayBgColorStart={'rgba(36, 41, 67, 0.15)'} overlayBgColorEnd={'rgba(36, 41, 67, 0.85)'}><Image src={product.images[imageclick].src} /></Zoom>)
-                                                    }
-                                                </Flex>
-                                                <div className="bigprolist">
-                                                    {product.images && product.images.map((item, index) => {
-                                                        return loading ? <Skeleton width={90} height={70} /> : <Image key={index} src={item && item.src} alt="sacheu" onClick={() => setImageclick(index)} className="prodmetaImages" />
-                                                    })}
+                                                <div className="relatedProduct relapro">
+                                                    <div className="product-listing">
+                                                        <Slider infinite={product && product.length > 3} {...mobsettings}>
+                                                            {product.images && product.images.map((item, index) => {
+                                                                return (
+                                                                    <>
+                                                                        <div className='itemBox' key={index}>
+                                                                            <div className='item'>
+                                                                                {loading
+                                                                                    ? <Skeleton width={90} height={70} />
+                                                                                    : <Zoom overlayBgColorStart={'rgba(36, 41, 67, 0.15)'} overlayBgColorEnd={'rgba(36, 41, 67, 0.85)'}>
+                                                                                        <Image key={index} src={item && item.src} alt="sacheu" onClick={() => setImageclick(index)} className="prodmetaImages" />
+                                                                                    </Zoom>}
+                                                                            </div>
+                                                                        </div>
+                                                                    </>
+                                                                )
+                                                            })}
+                                                        </Slider>
+                                                    </div>
                                                 </div>
                                             </>
-                                        )
-                                            :
-                                            <Slider {...mobsettings}>
-                                                {product.images && product.images.map((item, index) => {
-                                                    return loading ? <Skeleton width={90} height={70} /> : <Zoom overlayBgColorStart={'rgba(36, 41, 67, 0.15)'} overlayBgColorEnd={'rgba(36, 41, 67, 0.85)'}><Image key={index} src={item && item.src} alt="sacheu" onClick={() => setImageclick(index)} className="prodmetaImages" /></Zoom>
-                                                })}
-                                            </Slider>
                                         }
-
-                                    </div>
+                                    </div> */}
                                 </div>
 
 
@@ -125,14 +157,7 @@ const ProductPage = () => {
                                     {/* <Heading pb="2rem" className="PDP_productTitle">{product.id}</Heading> */}
                                     <Text className="PDP_cartprice" fontWeight="bold" pb="1rem">{loading ? <Skeleton width={75} height={70} /> : `$${product.variants[0].price}`}</Text>
 
-                                    {/* <div style={{ textAlign: 'center' }} className="prosreview">
-                                        <div class="yotpo bottomLine" data-product-id={product.id} style={{ display: 'inline-block' }}></div>
-                                    </div>
-
-                                    <div style={{ textAlign: 'center' }}>
-                                        <div class="yotpo bottomLine" data-product-id="4746070032433" style={{ display: 'inline-block' }}></div>
-                                    </div> */}
-                                    <Text>
+                                    <Text>{extractedInfo} <br /> {product.id}
                                         <div style={{ textAlign: 'center' }} className="prosreview">
                                             <div class="yotpo bottomLine" data-product-id={extractedInfo} style={{ display: 'inline-block' }}></div>
                                         </div>
