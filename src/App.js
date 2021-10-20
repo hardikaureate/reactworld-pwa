@@ -1,39 +1,51 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, Suspense } from "react"
 import "./App.css"
 import "./animate.css"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import ScrollToTop from "./components/ScrollToTop"
-import Header from "./components/Header"
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Portfolio from "./pages/Portfolio"
-import AllPosts from "./components/AllPosts"
+//import Header from "./components/Header"
+//import Home from "./pages/Home"
+//import About from "./pages/About"
+//import Portfolio from "./pages/Portfolio"
+//import AllPosts from "./components/AllPosts"
 import BlogDetailsPage from "./components/BlogDetailsPage"
-import Contact from "./pages/Contact"
-import Footer from "./components/Footer"
-import MainShop from "./pages/MainShop"
+//import Contact from "./pages/Contact"
+//import Footer from "./components/Footer"
+//import MainShop from "./pages/MainShop"
 import Cart from "./shop_component/Cart"
 import ParentProductPage from "./shop_component/ParentProductPage"
 import Documentation from "./components/Documentation"
-import NotFound from "./components/NotFound"
+//import NotFound from "./components/NotFound"
 import SacheuShopProducts from "./shop_component/SacheuShopProducts"
-import GLogin from "./components/GLogin"
+//import GLogin from "./components/GLogin"
 //import CategoryPost from './components/CategoryPost'
+
+const Header = React.lazy(() => import('./components/Header'));
+const Home = React.lazy(() => import('./pages/Home'));
+const About = React.lazy(() => import('./pages/About'));
+const Portfolio = React.lazy(() => import('./pages/Portfolio'));
+const MainShop = React.lazy(() => import('./pages/MainShop'));
+const AllPosts = React.lazy(() => import('./components/AllPosts'));
+const NotFound = React.lazy(() => import('./components/NotFound'));
+const GLogin = React.lazy(() => import('./components/GLogin'));
+const Contact = React.lazy(() => import('./pages/Contact'));
+const Footer = React.lazy(() => import('./components/Footer'));
 
 function App() {
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000)
   }, [])
-  if (loading)
-    return (
-      <div>
-        <div class="loading">Loading&#8230</div>
-      </div>
-    )
+  // if (loading)
+  //   return (
+  //     <div>
+  //       <div class="loading">Loading&#8230</div>
+  //     </div>
+  //   )
 
   return (
     <div className="App">
+    <Suspense className="loading" fallback={<small>Loading&#8230</small>}>
       <Router>
         <ScrollToTop>
           <Header />
@@ -81,6 +93,7 @@ function App() {
           <Footer />
         </ScrollToTop>
       </Router>
+      </Suspense>
     </div>
   )
 }

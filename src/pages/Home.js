@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
-import Homebanner from '../components/Homebanner'
+//import Homebanner from '../components/Homebanner'
 //import HomeContact from '../components/HomeContact'
-import InnerMenu from '../components/InnerMenu'
+//import InnerMenu from '../components/InnerMenu'
 import LazyLoad from 'react-lazyload'
 //import MegaSlider from '../components/MegaSlider';
 import PDPRelatedProduct from '../components/slider/PDPRelatedProduct';
@@ -10,9 +10,9 @@ import Counter from '../components/Counter';
 //import DupForm from '../components/DupForm';
 //import HomeTextBanner from '../components/HomeTextBanner';
 
-// const Homebanner = React.lazy(() => import('../components/Homebanner'));
+const Homebanner = React.lazy(() => import('../components/Homebanner'));
 // const HomeContact = React.lazy(() => import('../components/HomeContact'));
-// const InnerMenu = React.lazy(() => import('../components/InnerMenu'));
+ const InnerMenu = React.lazy(() => import('../components/InnerMenu'));
 
 const Home = () => {
     return (
