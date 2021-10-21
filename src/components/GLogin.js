@@ -36,7 +36,7 @@ const GLogin = () => {
     }
 
     return (
-        <div>
+        <>
             <div id="main" class="alt">
                 <section id="one">
                     <div class="inner googleuserTitle">
@@ -87,7 +87,7 @@ const GLogin = () => {
                     </div>
                 </section>
             </div>
-        </div>
+        </>
     );
 }
 
