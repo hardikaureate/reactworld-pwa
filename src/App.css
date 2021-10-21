@@ -4954,3 +4954,9 @@ h2.nfhomeLink {
 .inner.googleuserTitle button span {
     color: #fff;
 }
+
+.error-msg-screen {
+    color: #666;
+    padding: 50px;
+    text-align: center;
+}

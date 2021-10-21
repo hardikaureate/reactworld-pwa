@@ -23,6 +23,10 @@ const Contact = lazy(() => import('./pages/Contact'))
 const Footer = lazy(() => import('./components/Footer'))
 
 function App() {
+  // useEffect(() => {
+  //   throw new Error("Something went wrong!");
+  // }, []);
+
   const [loading, setLoading] = useState(true)
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000)
