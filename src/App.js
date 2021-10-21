@@ -36,16 +36,16 @@ function App() {
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000)
   }, [])
-  // if (loading)
-  //   return (
-  //     <div>
-  //       <div class="loading">Loading&#8230</div>
-  //     </div>
-  //   )
+  if (loading)
+    return (
+      <div>
+        <div class="loading">Loading&#8230</div>
+      </div>
+    )
 
   return (
     <div className="App">
-    <Suspense className="loading" fallback={<small>Loading&#8230</small>}>
+    <Suspense className="loading" fallback={<small>Loading...</small>}>
       <Router>
         <ScrollToTop>
           <Header />

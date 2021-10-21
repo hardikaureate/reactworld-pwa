@@ -30,7 +30,7 @@ const Documentation = () => {
                                             </tr>
                                             <tr>
                                                 <td>Item3</td>
-                                                <td>React.Lazy()</td>
+                                                <td><a href="/">React.Lazy()</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item4</td>
@@ -38,11 +38,11 @@ const Documentation = () => {
                                             </tr>
                                             <tr>
                                                 <td>Item5</td>
-                                                <td>useParamas()</td>
+                                                <td><a href="/shop">useParamas()</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item6</td>
-                                                <td>Conditional Rendering</td>
+                                                <td><a href="/products/silky-sleep-set-rose-pink">Conditional Rendering</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item7</td>
@@ -54,7 +54,7 @@ const Documentation = () => {
                                             </tr>
                                             <tr>
                                                 <td>Item9</td>
-                                                <td>Code-Splitting</td>
+                                                <td><a href="/">Code-Splitting</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item10</td>
@@ -74,7 +74,7 @@ const Documentation = () => {
                                             </tr>
                                             <tr>
                                                 <td>Item14</td>
-                                                <td>React Moment</td>
+                                                <td><a href="/">React Moment</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item15</td>
@@ -102,11 +102,11 @@ const Documentation = () => {
                                             </tr>
                                             <tr>
                                                 <td>Item21</td>
-                                                <td>Skeleton</td>
+                                                <td><a href="/products/silky-sleep-set-rose-pink">Skeleton</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item22</td>
-                                                <td>Suspense with Fallback</td>
+                                                <td><a href="/">Suspense with Fallback</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item23</td>
@@ -133,11 +133,11 @@ const Documentation = () => {
                                             </tr>
                                             <tr>
                                                 <td>Item25</td>
-                                                <td>Components and Props(Passing Data Through Props)</td>
+                                                <td><a href="/shop">Components and Props(Passing Data Through Props)</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item26</td>
-                                                <td>React Filter</td>
+                                                <td><a href="/portfolio">React Filter</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item27</td>
@@ -161,7 +161,7 @@ const Documentation = () => {
                                             </tr>
                                             <tr>
                                                 <td>Item32</td>
-                                                <td>Images from /public</td>
+                                                <td><a href="/portfolio">Images from /public</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item33</td>
@@ -193,27 +193,27 @@ const Documentation = () => {
                                             </tr>
                                             <tr>
                                                 <td>Item40</td>
-                                                <td>Form Validation</td>
+                                                <td><a href="/contact">Form Validation</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item41</td>
-                                                <td>React Counter</td>
+                                                <td><a href="/">React Counter</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item42</td>
-                                                <td>React Image Zoom</td>
+                                                <td><a href="/products/facial-roller">React Image Zoom</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item43</td>
-                                                <td>React 404 Page Not Found</td>
+                                                <td><a href="/404">React 404 Page Not Found</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item44</td>
-                                                <td>Google Login with React</td>
+                                                <td><a href="/glogin">Google Login with React</a></td>
                                             </tr>
                                             <tr>
                                                 <td>Item45</td>
-                                                <td>Hide Code from Dev Tools</td>
+                                                <td><a href="/">Hide Code from Dev Tools</a></td>
                                             </tr>
                                         </tbody>
                                     </table>

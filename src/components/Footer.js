@@ -31,7 +31,6 @@ const Footer = () => {
                             <li><Link to="/post">Blog</Link></li>
                             <li><Link to="/contact">Contact</Link></li>
                             <li><Link to="/doc">Document</Link></li>
-                            <li><Link to="/glogin">Login</Link></li>
                         </ul>
                         </div>
                         <div className="footerThree">
