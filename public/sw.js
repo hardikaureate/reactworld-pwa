@@ -14,6 +14,7 @@ this.addEventListener("install", (event) => {
                 "/static/js/main.chunk.js",
                 "/static/js/0.chunk.js",
                 "/index.html",
+                "/^\/product\//",
                 "/assets/aboutbio.jpg",
                 "/images/vision.jpg",
                 "/images/mission.jpg",
@@ -54,3 +55,4 @@ this.addEventListener("fetch", (event) => {
         )
     }
 })
+
