@@ -63,7 +63,14 @@ const Cart = () => {
               <Button w="100%" className="checkoutButton">
                 <a w="100%" href={checkout?.webUrl}> Checkout</a>
               </Button>
-            </DrawerFooter> : null}
+            </DrawerFooter> 
+            : 
+            <DrawerFooter>
+              <Button w="100%" className="checkoutButton">
+                <a w="100%" href='/shop'> Continue Shopping</a>
+              </Button>
+            </DrawerFooter>
+            }
         </DrawerContent>
       </Drawer>
     </div>

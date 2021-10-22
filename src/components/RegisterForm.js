@@ -64,7 +64,7 @@ class RegisterForm extends React.Component {
 
     if (!fields["txtEmail"]) {
       formIsValid = false;
-      errors["txtEmail"] = "*Please enter your email-ID.";
+      errors["txtEmail"] = "*Please enter your Email-ID.";
     }
 
     if (typeof fields["txtEmail"] !== "undefined") {
@@ -72,7 +72,7 @@ class RegisterForm extends React.Component {
       var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
       if (!pattern.test(fields["txtEmail"])) {
         formIsValid = false;
-        errors["txtEmail"] = "*Please enter valid email-ID.";
+        errors["txtEmail"] = "*Please enter valid Email-ID.";
       }
     }
 
@@ -137,18 +137,18 @@ class RegisterForm extends React.Component {
                 <form method="post" name="userRegistrationForm" onSubmit={this.submituserRegistrationForm}>
                   <div className="fields">
                     <div className="field half">
-                      <label className="animate__animated animate__fadeInUp" for="name">Name</label>
+                      <label className="animate__animated animate__fadeInUp" for="name">Name*</label>
                       <input type="text" name="txtName" onChange={this.handleChange} value={this.state.fields.txtName} />
                       <div className="errorMsg">{this.state.errors.txtName}</div>
                     </div>
                     <div className="field half">
-                      <label className="animate__animated animate__fadeInUp" for="email">Email</label>
+                      <label className="animate__animated animate__fadeInUp" for="email">Email*</label>
                       <input type="text" name="txtEmail" onChange={this.handleChange} value={this.state.fields.txtEmail} name="txtEmail" />
                       <div className="errorMsg">{this.state.errors.txtEmail}</div>
                     </div>
                     <div className="field">
-                      <label className="animate__animated animate__fadeInUp" for="message">Message</label>
-                      <textarea name="txtMessage" rows="6" onChange={this.handleChange} value={this.state.fields.txtMessage}></textarea>
+                      <label className="animate__animated animate__fadeInUp" for="message">Message*</label>
+                      <textarea rows="6" onChange={this.handleChange} value={this.state.fields.txtMessage} name="txtMessage" ></textarea>
                       <div className="errorMsg">{this.state.errors.txtMessage}</div>
                     </div>
                   </div>

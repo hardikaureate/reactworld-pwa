@@ -59,15 +59,15 @@ const HomeContact = () => {
                             <form method="post" action="#">
                                 <div className="fields">
                                     <div className="field half">
-                                        <label className="animate__animated animate__fadeInUp" for="name">Name</label>
+                                        <label className="animate__animated animate__fadeInUp" for="name">Name*</label>
                                         <input type="text" name="name" id="name" onChange={getUserData} value={user.txtName} name="txtName" />
                                     </div>
                                     <div className="field half">
-                                        <label className="animate__animated animate__fadeInUp" for="email">Email</label>
+                                        <label className="animate__animated animate__fadeInUp" for="email">Email*</label>
                                         <input type="text" name="email" id="email" onChange={getUserData} value={user.txtEmail} name="txtEmail" />
                                     </div>
                                     <div className="field">
-                                        <label className="animate__animated animate__fadeInUp" for="message">Message</label>
+                                        <label className="animate__animated animate__fadeInUp" for="message">Message*</label>
                                         <textarea name="message" id="message" rows="6" onChange={getUserData} value={user.txtMessage} name="txtMessage"></textarea>
                                     </div>
                                 </div>
