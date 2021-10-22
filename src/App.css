@@ -4960,3 +4960,7 @@ h2.nfhomeLink {
     padding: 50px;
     text-align: center;
 }
+
+a.active {
+    color: #6eecff;
+}
