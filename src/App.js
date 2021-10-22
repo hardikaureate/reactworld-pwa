@@ -2,7 +2,6 @@ import React, { useState, useEffect, Suspense, lazy } from "react"
 import "./App.css"
 import "./animate.css"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
-import ScrollToTop from "./components/ScrollToTop"
 import BlogDetailsPage from "./components/BlogDetailsPage"
 import Cart from "./shop_component/Cart"
 import ParentProductPage from "./shop_component/ParentProductPage"
@@ -16,9 +15,9 @@ import SacheuShopProducts from "./shop_component/SacheuShopProducts"
 //import { getToken, removeUserSession, setUserSession } from "./components/newlogin/Common"
 //import axios from "axios"
 //import CategoryPost from './components/CategoryPost'
+import ScrollToTop from 'react-scroll-up';
 
 const Header = lazy(() => import('./components/Header'))
-//const Home = lazy(() => import('./pages/Home'))
 const Home = lazy(() => new Promise((resolve, reject) => setTimeout(() => resolve(import('./pages/Home')), 100)))
 const About = lazy(() => new Promise((resolve, reject) => setTimeout(() => resolve(import('./pages/About')), 100)))
 const Portfolio = lazy(() => import('./pages/Portfolio'))
@@ -34,32 +33,32 @@ function App() {
   //   throw new Error("Something went wrong!");
   // }, []);
 
-  const [authLoading, setAuthLoading] = useState(true);
+  //const [authLoading, setAuthLoading] = useState(true);
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000)
   }, [])
 
-   /*useEffect(() => {
-    setTimeout(() => setLoading(false), 1000)
-    const token = getToken();
-    if (!token) {
-      return;
-    }
+  /*useEffect(() => {
+   setTimeout(() => setLoading(false), 1000)
+   const token = getToken();
+   if (!token) {
+     return;
+   }
 
-    axios.get(`http://localhost:4000/verifyToken?token=${token}`).then(response => {
-      setUserSession(response.data.token, response.data.user);
-      setAuthLoading(false);
-    }).catch(error => {
-      removeUserSession();
-      setAuthLoading(false);
-    });
-  }, []);
+   axios.get(`http://localhost:4000/verifyToken?token=${token}`).then(response => {
+     setUserSession(response.data.token, response.data.user);
+     setAuthLoading(false);
+   }).catch(error => {
+     removeUserSession();
+     setAuthLoading(false);
+   });
+ }, []);
 
-  if (authLoading && getToken()) {
-    return <div className="content">Checking Authentication...</div>
-  }*/
+ if (authLoading && getToken()) {
+   return <div className="content">Checking Authentication...</div>
+ }*/
 
   if (loading)
     return (
@@ -68,57 +67,57 @@ function App() {
       </div>
     )
 
- 
-
 
   return (
     <div className="App">
+      <ScrollToTop transition='transform 1s ease-in-out' transitionTimingFunction='linear' cursor='pointer' position='fixed' duration={2000}>
+        <span className="topscroll"><img src="images/top.png" alt="img" /></span>
+      </ScrollToTop>
       {typeof window !== 'undefined' && (
         <Suspense fallback={<div class="loading">Loading&#8230</div>}>
           <Router>
-            <ScrollToTop>
-              <Header />
-              <Cart />
-              <Switch>
-                <Route path="/" exact>
-                  <Home />
-                </Route>
-                <Route path="/glogin" exact>
-                  <GLogin />
-                </Route>
-                <Route path="/portfolio" exact>
-                  <Portfolio />
-                </Route>
-                <Route path="/about" exact>
-                  <About />
-                </Route>
-                <Route path="/contact" exact>
-                  <Contact />
-                </Route>
-                <Route path="/post/:slug" exact>
-                  <BlogDetailsPage />
-                </Route>
-                {/* 
+            <Header />
+            <Cart />
+            <Switch>
+              <Route path="/" exact>
+                <Home />
+              </Route>
+              <Route path="/glogin" exact>
+                <GLogin />
+              </Route>
+              <Route path="/portfolio" exact>
+                <Portfolio />
+              </Route>
+              <Route path="/about" exact>
+                <About />
+              </Route>
+              <Route path="/contact" exact>
+                <Contact />
+              </Route>
+              <Route path="/post/:slug" exact>
+                <BlogDetailsPage />
+              </Route>
+              {/* 
               <Route path="/category/:slug" exact>
                 <CategoryPost />
               </Route> 
               */}
-                <Route path="/products/:handle" exact>
-                  <ParentProductPage />
-                </Route>
-                <Route path="/post/" exact>
-                  <AllPosts />
-                </Route>
-                <Route path="/shop" exact>
-                  <MainShop />
-                </Route>
-                <Route path="/sacheushop" exact>
-                  <SacheuShopProducts />
-                </Route>
-                <Route path="/doc" exact>
-                  <Documentation />
-                </Route>
-                {/* <Route path="/loginhome" exact>
+              <Route path="/products/:handle" exact>
+                <ParentProductPage />
+              </Route>
+              <Route path="/post/" exact>
+                <AllPosts />
+              </Route>
+              <Route path="/shop" exact>
+                <MainShop />
+              </Route>
+              <Route path="/sacheushop" exact>
+                <SacheuShopProducts />
+              </Route>
+              <Route path="/doc" exact>
+                <Documentation />
+              </Route>
+              {/* <Route path="/loginhome" exact>
                   <LoginHome />
                 </Route>
                 <PublicRoute path="/loginform" exact>
@@ -127,10 +126,9 @@ function App() {
                 <PrivateRoute path="/logindashboard" exact>
                   <LoginDashboard />
                 </PrivateRoute> */}
-                <Route path="" component={NotFound} />
-              </Switch>
-              <Footer />
-            </ScrollToTop>
+              <Route path="" component={NotFound} />
+            </Switch>
+            <Footer />
           </Router>
         </Suspense>
       )}

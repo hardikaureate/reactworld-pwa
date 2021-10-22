@@ -217,6 +217,14 @@ const Documentation = () => {
                                                 <td>Item45</td>
                                                 <td><a href="/">Hide Code from Dev Tools</a></td>
                                             </tr>
+                                            <tr>
+                                                <td>Item46</td>
+                                                <td><a href="/">Datatable with Sorting and Pagination</a></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Item47</td>
+                                                <td><a href="/">Scroll to Top</a></td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                 </div>

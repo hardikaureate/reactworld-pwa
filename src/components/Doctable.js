@@ -1,14 +1,14 @@
-import React,{useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import DataTable from 'react-data-table-component';
 import data from '../blogdata/tabledata.json';
 
 const Doctable = () => {
     const [columns, setColumns] = useState([]);
-	const [pending, setPending] = useState(true);
+    const [pending, setPending] = useState(true);
     useEffect(() => {
-		const timeout = setTimeout(() => {
-			setColumns([
-				{
+        const timeout = setTimeout(() => {
+            setColumns([
+                {
                     name: 'ID',
                     selector: 'name',
                     sortable: true,
@@ -26,12 +26,12 @@ const Doctable = () => {
                 {
                     name: 'Company',
                     selector: 'company',
-                },
-			]);
-			setPending(false);
-		}, 1500);
-		return () => clearTimeout(timeout);
-	}, []);
+                }
+            ]);
+            setPending(false);
+        }, 1500);
+        return () => clearTimeout(timeout);
+    }, []);
 
     return (
         <>

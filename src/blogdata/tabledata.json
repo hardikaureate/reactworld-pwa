@@ -255,9 +255,28 @@
         "allitem": "Hide Code from Dev Tools",
         "email": "React World - You can Explore",
         "company": "AureateLabs"
-    }, {
+    },
+    {
         "name": "44",
         "allitem": "Forms",
+        "email": "React World - You can Explore",
+        "company": "AureateLabs"
+    },
+    {
+        "name": "45",
+        "allitem": "Datatable with Sorting and Pagination",
+        "email": "React World - You can Explore",
+        "company": "AureateLabs"
+    },
+    {
+        "name": "46",
+        "allitem": "React Router Dom",
+        "email": "React World - You can Explore",
+        "company": "AureateLabs"
+    },
+    {
+        "name": "47",
+        "allitem": "Scroll to Top",
         "email": "React World - You can Explore",
         "company": "AureateLabs"
     }

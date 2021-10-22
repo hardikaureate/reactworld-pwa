@@ -53,6 +53,7 @@ const Header = () => {
                             <li><NavLink activeClassName="active" to="/portfolio">Portfolio</NavLink></li>
                             <li><NavLink activeClassName="active" to="/shop">Shop</NavLink></li>
                             <li><NavLink activeClassName="active" to="/post">Blog</NavLink></li>
+                            <li><NavLink activeClassName="active" to="/doc">WebPath</NavLink></li>
                             <li><NavLink activeClassName="active" to="/contact">Contact</NavLink></li>
                             {width < 767 ?
                                 <li><Box className="mobilecarticon"><Icon className="cartIcon" onClick={() => openCart()} fill="#fff" cursor="pointer" as={MdShoppingCart} w={30} h={30}></Icon>
