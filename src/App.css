@@ -4965,15 +4965,22 @@ a.active {
     color: #6eecff;
 }
 
-.rdt_TableHeadRow .rdt_TableCol_Sortable {
+.doctable .rdt_TableHeadRow .rdt_TableCol_Sortable {
     font-size: 20px;
     font-weight: 600;
 }
 
-.rdt_TableHeadRow div#cell-1-undefined {
+.doctable .rdt_TableHeadRow div#cell-1-undefined {
     font-weight: 600;
 }
 
-.rdt_Pagination button svg {
+.doctable .rdt_Pagination button svg {
     margin-left: -10px;
+}
+
+.doctable .rdt_TableHeader div {
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 25px;
+    padding-top: 25px;
 }
