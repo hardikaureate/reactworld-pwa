@@ -35,23 +35,32 @@ const Cart = () => {
           <DrawerBody>
             {checkout.lineItems ? checkout.lineItems.map(item => (
 
-              <Grid templateColumns="repeat(4, 1fr)" gap={1} key={item.id}>
-                <Flex alignItems="center" justifyContent="center">
-                  <IoMdTrash height={90} width={90} cursor="pointer" onClick={() => removeLineItem(item.id)} className="minicartTrash" />
-                </Flex>
-                <Flex alignItems="center" justifyContent="center">
-                  <Image src={item.variant.image.src} className="minicartImage" />
-                </Flex>
-                <Flex alignItems="center" justifyContent="center">
-                  <Text><Link to={`/products/${item.variant.product.handle}`} className="minicartName">{item.title}</Link></Text>
-                </Flex>
-                <Flex alignItems="center" justifyContent="center" className="minicartPrice">
-                  <Text>${item.variant.price}</Text>
-                </Flex>
-                {/* <div className="cartQty">
+
+              <Grid templateColumns="repeat(1, 1fr)" gap={1} key={item.id} className="minicartlist">
+                <div className="fulldrawer">
+                  <div className="maincartdrawerone">
+                    <Flex alignItems="center" justifyContent="center">
+                      <Image src={item.variant.image.src} className="minicartImage" />
+                    </Flex>
+                    {/* <div className="cartQty">
                   <NumberInput />
                 </div> */}
+                  </div>
+                  <div className="maincartdrawertwo">
+                    <Flex alignItems="center" justifyContent="center">
+                      <Text><Link to={`/products/${item.variant.product.handle}`} className="minicartName">{item.title}</Link></Text>
+                    </Flex>
+                    <Flex className="minicartPrice">
+                      <Text>${item.variant.price}</Text>
+                    </Flex>
+                    <Flex>
+                      <IoMdTrash height={90} width={90} cursor="pointer" onClick={() => removeLineItem(item.id)} className="minicartTrash" />
+                    </Flex>
+                  </div>
+                </div>
+
               </Grid>
+
             )) : <Box h="100%" w="100%">
               <Text h="100%" w="100%" display="flex" flexDir="column" alignItems="center" justifyContent="center"> Your Cart is Empty!</Text>
             </Box>
@@ -63,14 +72,14 @@ const Cart = () => {
               <Button w="100%" className="checkoutButton">
                 <a w="100%" href={checkout?.webUrl}> Checkout</a>
               </Button>
-            </DrawerFooter> 
-            : 
+            </DrawerFooter>
+            :
             <DrawerFooter>
               <Button w="100%" className="checkoutButton">
                 <a w="100%" href='/shop'> Continue Shopping</a>
               </Button>
             </DrawerFooter>
-            }
+          }
         </DrawerContent>
       </Drawer>
     </div>

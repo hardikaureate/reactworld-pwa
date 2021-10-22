@@ -4678,6 +4678,16 @@ a.minicartName {
 .minicartPrice {
     color: #000;
     font-weight: 600;
+    height: 25px;
+    margin-bottom: 15px;
+}
+
+.maincartdrawertwo p {
+    margin-bottom: 15px !important;
+}
+
+button.checkoutButton a {
+    border: none;
 }
 
 svg.minicartTrash {
@@ -5000,4 +5010,28 @@ span.topscroll {
     box-shadow: 0 9px 25px 0 rgb(213 213 222 / 28%);
     border: none;
     outline: none;
+}
+
+.maincartdrawerone {
+    width: 40%;
+    padding-right: 10%;
+}
+
+.maincartdrawertwo {
+    width: 50%;
+}
+
+.fulldrawer {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+}
+
+.minicartlist:last-child {
+    border: none;
+}
+
+.minicartlist {
+    border-bottom: 2px solid #e7f4ff;
+    margin-bottom: 20px;
 }
