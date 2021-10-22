@@ -4973,3 +4973,7 @@ a.active {
 .rdt_TableHeadRow div#cell-1-undefined {
     font-weight: 600;
 }
+
+.rdt_Pagination button svg {
+    margin-left: -10px;
+}
