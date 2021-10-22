@@ -8,6 +8,13 @@ import Cart from "./shop_component/Cart"
 import ParentProductPage from "./shop_component/ParentProductPage"
 import Documentation from "./components/Documentation"
 import SacheuShopProducts from "./shop_component/SacheuShopProducts"
+// import LoginHome from "./components/newlogin/LoginHome"
+// import LoginForm from "./components/newlogin/LoginForm"
+// import LoginDashboard from "./components/newlogin/LoginDashboard"
+// import PublicRoute from "./components/newlogin/PublicRoute"
+// import PrivateRoute from "./components/newlogin/PrivateRoute"
+//import { getToken, removeUserSession, setUserSession } from "./components/newlogin/Common"
+//import axios from "axios"
 //import CategoryPost from './components/CategoryPost'
 
 const Header = lazy(() => import('./components/Header'))
@@ -27,10 +34,32 @@ function App() {
   //   throw new Error("Something went wrong!");
   // }, []);
 
+  const [authLoading, setAuthLoading] = useState(true);
   const [loading, setLoading] = useState(true)
+
   useEffect(() => {
     setTimeout(() => setLoading(false), 1000)
   }, [])
+
+   /*useEffect(() => {
+    setTimeout(() => setLoading(false), 1000)
+    const token = getToken();
+    if (!token) {
+      return;
+    }
+
+    axios.get(`http://localhost:4000/verifyToken?token=${token}`).then(response => {
+      setUserSession(response.data.token, response.data.user);
+      setAuthLoading(false);
+    }).catch(error => {
+      removeUserSession();
+      setAuthLoading(false);
+    });
+  }, []);
+
+  if (authLoading && getToken()) {
+    return <div className="content">Checking Authentication...</div>
+  }*/
 
   if (loading)
     return (
@@ -38,6 +67,8 @@ function App() {
         <div class="loading">Loading&#8230</div>
       </div>
     )
+
+ 
 
 
   return (
@@ -87,6 +118,15 @@ function App() {
                 <Route path="/doc" exact>
                   <Documentation />
                 </Route>
+                {/* <Route path="/loginhome" exact>
+                  <LoginHome />
+                </Route>
+                <PublicRoute path="/loginform" exact>
+                  <LoginForm />
+                </PublicRoute>
+                <PrivateRoute path="/logindashboard" exact>
+                  <LoginDashboard />
+                </PrivateRoute> */}
                 <Route path="" component={NotFound} />
               </Switch>
               <Footer />

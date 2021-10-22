@@ -1,8 +1,10 @@
 import React from 'react'
+import Doctable from './Doctable'
 
 const Documentation = () => {
     return (
         <>
+            <Doctable />
             <div id="wrapper">
                 <section id="one">
                     <div class="inner">
@@ -126,7 +128,7 @@ const Documentation = () => {
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            
+
                                             <tr>
                                                 <td>Item24</td>
                                                 <td>Top Scroll on Page Load/Refresh/Render</td>
@@ -223,6 +225,8 @@ const Documentation = () => {
                     </div>
                 </section>
             </div>
+
+
         </>
     )
 }
