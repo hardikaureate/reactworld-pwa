@@ -70,7 +70,7 @@ function App() {
 
   return (
     <div className="App">
-      <ScrollToTop transition='transform 1s ease-in-out' transitionTimingFunction='linear' cursor='pointer' position='fixed' duration={2000}>
+      <ScrollToTop showUnder={160} transition='transform 1s ease-in-out' transitionTimingFunction='linear' cursor='pointer' position='fixed' duration={2000}>
         <span className="topscroll"><img src="images/top.png" alt="img" /></span>
       </ScrollToTop>
       {typeof window !== 'undefined' && (
