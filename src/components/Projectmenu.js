@@ -8,9 +8,8 @@ const Projectmenu = ({ filterItem, menuList }) => {
         <div className="btn-group filtermenu">
           {menuList.map((curElem) => {
             return (
-              
               <button
-                className="btn-group__item"
+                className="btn-group__item" key={curElem.id}
                 onClick={() => filterItem(curElem)}>
                 {curElem}
               </button>

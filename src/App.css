@@ -1929,7 +1929,7 @@ textarea {
     -webkit-appearance: none;
     -ms-appearance: none;
     appearance: none;
-    background: rgba(212, 212, 255, 0.035);
+    background: rgba(212, 212, 255, 0.055);
     border: none;
     border-radius: 0;
     color: inherit;
@@ -3394,7 +3394,7 @@ body.is-preload #header.alt {
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
-    padding: 6em 0 2em 0;
+    padding: 3em 0 2em 0;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -4129,6 +4129,7 @@ textarea {
 .inner.mainfooter {
     display: flex;
     align-items: center;
+    padding-bottom: 0px !important;
 }
 
 .inner.mainfooter {
@@ -5034,4 +5035,12 @@ span.topscroll {
 .minicartlist {
     border-bottom: 2px solid #e7f4ff;
     margin-bottom: 20px;
+}
+
+.footerDiv {
+    padding-top: 1em !important;
+}
+
+.inner.topcontent {
+    padding-top: 0 !important;
 }

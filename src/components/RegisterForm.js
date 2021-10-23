@@ -48,7 +48,7 @@ class RegisterForm extends React.Component {
       errors["txtName"] = "*Please enter your Name.";
     }
 
-    if (typeof fields["txtName"] !== "undefined") {
+    if (typeof fields["txtName"] !== null && "") {
       if (!fields["txtName"].match(/^[a-zA-Z ]*$/)) {
         formIsValid = false;
         errors["txtName"] = "*Please enter alphabet characters only.";

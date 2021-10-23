@@ -7,7 +7,7 @@ const Documentation = () => {
             <Doctable />
             <div id="wrapper">
                 <section id="one">
-                    <div class="inner">
+                    <div class="inner topcontent">
                         <div class="row">
                             <div class="col-12 col-12-small">
                                 <h2 style={{ textAlign: 'center', marginBottom: '50px' }}>Use React Hooks and Functionalities</h2>

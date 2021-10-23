@@ -270,6 +270,7 @@ iframe.videoframe {
     position: relative;
     display: block;
     width: 100%;
+    border: none;
 }
 
 .product-listing .imageContainer a img {

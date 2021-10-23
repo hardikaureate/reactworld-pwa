@@ -11,10 +11,9 @@ const uniqueList = [
   ),
   
 ]
-//console.log(uniqueList)
+console.log(uniqueList)
 
 const AllProject = () => {
-//  const [loading, setLoading] = useState(true)
   const [projectData, setMenuData] = useState(Projectlist)
   const [menuList, setMenuList] = useState(uniqueList)
 
@@ -22,7 +21,7 @@ const AllProject = () => {
     if (category === "All") {
       setMenuData(Projectlist)
       localStorage.setItem("prolist",JSON.stringify(Projectlist))
-      //return
+      return
     }
     
     const updatedList = Projectlist.filter((curElem) => {
@@ -32,7 +31,7 @@ const AllProject = () => {
     setMenuData(updatedList)
     localStorage.setItem("Menulist",JSON.stringify(updatedList))
   }
-  //if (loading) return <div><div class="loading">Loading&#8230;</div></div>
+  
   return (
     <>
       <div id="wrapper">

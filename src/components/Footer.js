@@ -6,7 +6,7 @@ import FooterBlog from './FooterBlog'
 const Footer = () => {
     return (
         <>
-            <div id="wrapper">
+            <div id="wrapper" className="footerDiv">
                 <footer id="footer">
                     <div className="inner mainfooter">
                         <div className="footerOne">

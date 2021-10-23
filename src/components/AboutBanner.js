@@ -9,7 +9,7 @@ const AboutBanner = () => {
                 <div id="main" class="alt">
 
                     <section id="one">
-                        <div class="inner">
+                        <div class="inner topcontent">
                             <header class="major">
                                 <h1 className="animate__animated animate__fadeInUp">About</h1>
                             </header>
