@@ -16,6 +16,7 @@ import SacheuShopProducts from "./shop_component/SacheuShopProducts"
 //import axios from "axios"
 //import CategoryPost from './components/CategoryPost'
 import ScrollToTop from 'react-scroll-up';
+import ClickToTop from "./components/ClickToTop"
 
 const Header = lazy(() => import('./components/Header'))
 const Home = lazy(() => new Promise((resolve, reject) => setTimeout(() => resolve(import('./pages/Home')), 100)))
@@ -27,6 +28,10 @@ const NotFound = lazy(() => import('./components/NotFound'))
 const GLogin = lazy(() => import('./components/GLogin'))
 const Contact = lazy(() => import('./pages/Contact'))
 const Footer = lazy(() => import('./components/Footer'))
+
+// window.onbeforeunload = function () {
+//   window.scrollTo(0, 0)
+// }
 
 function App() {
   // useEffect(() => {
@@ -70,6 +75,7 @@ function App() {
 
   return (
     <div className="App">
+        
       <ScrollToTop showUnder={160} transition='transform 1s ease-in-out' transitionTimingFunction='linear' cursor='pointer' position='fixed' duration={2000}>
         <span className="topscroll"><img src="images/top.png" alt="img" /></span>
       </ScrollToTop>
@@ -78,6 +84,7 @@ function App() {
           <Router>
             <Header />
             <Cart />
+            <ClickToTop>
             <Switch>
               <Route path="/" exact>
                 <Home />
@@ -128,8 +135,10 @@ function App() {
                 </PrivateRoute> */}
               <Route path="" component={NotFound} />
             </Switch>
+            </ClickToTop>
             <Footer />
           </Router>
+          
         </Suspense>
       )}
     </div>
