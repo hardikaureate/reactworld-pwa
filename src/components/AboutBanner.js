@@ -24,6 +24,7 @@ const AboutBanner = () => {
                             <p className="animate__animated animate__slideInDown">Codeworks’s capabilities across industries cover the entire spectrum, be it meeting critical demands of the Pharmaceutical industry ecosystem or leveraging advanced technology-based credit assessment tools for Banking & Financial institutions. Codeworks’s experience in enabling channel sales management in the Retail industry and setting up automation for business efficiency has transformed many businesses. Having delivered modernized software architecture for Travel & Hospitality enterprises, smart Content Management Systems for the Publishing and Education sector, and seamless communication across platforms for the Telecommunication & Media industry, Codeworks’s team has played a vital role in delivering top-notch solutions that give a competitive advantage to businesses.</p>
                         </div>
                     </section>
+                    
 
                 </div>
             </div>

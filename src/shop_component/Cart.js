@@ -31,11 +31,8 @@ const Cart = () => {
         <DrawerContent className="mainDrwaerContent">
           <DrawerCloseButton className="cartClose" />
           <DrawerHeader>Your Shopping Cart</DrawerHeader>
-
           <DrawerBody>
             {checkout.lineItems ? checkout.lineItems.map(item => (
-
-
               <Grid templateColumns="repeat(1, 1fr)" gap={1} key={item.id} className="minicartlist">
                 <div className="fulldrawer">
                   <div className="maincartdrawerone">
@@ -58,7 +55,6 @@ const Cart = () => {
                     </Flex>
                   </div>
                 </div>
-
               </Grid>
 
             )) : <Box h="100%" w="100%">
@@ -85,5 +81,4 @@ const Cart = () => {
     </div>
   )
 }
-
 export default Cart

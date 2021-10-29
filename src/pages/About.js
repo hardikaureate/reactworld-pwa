@@ -3,6 +3,7 @@ import AboutBanner from '../components/AboutBanner'
 import AboutCont from '../components/AboutCont'
 import LazyLoad from 'react-lazyload'
 import RegisterForm from '../components/RegisterForm'
+import { MyEmail } from '../components/MyEmail'
 const About = () => {
     
     return (
@@ -12,6 +13,9 @@ const About = () => {
             </LazyLoad>
             <LazyLoad height={500}>
                 <AboutCont />
+            </LazyLoad>
+            <LazyLoad height={500}>
+                <MyEmail />
             </LazyLoad>
             <LazyLoad height={500}>
                 <RegisterForm />

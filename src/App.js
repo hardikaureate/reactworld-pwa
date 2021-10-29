@@ -75,8 +75,8 @@ function App() {
 
   return (
     <div className="App">
-        
-      <ScrollToTop showUnder={160} transition='transform 1s ease-in-out' transitionTimingFunction='linear' cursor='pointer' position='fixed' duration={2000}>
+
+      <ScrollToTop showUnder={160} transition='transform 1s ease-in-out' transitionTimingFunction='linear' z-index='9999999 !important' cursor='pointer' position='fixed' duration={2000}>
         <span className="topscroll"><img src="images/top.png" alt="img" /></span>
       </ScrollToTop>
       {typeof window !== 'undefined' && (
@@ -85,46 +85,46 @@ function App() {
             <Header />
             <Cart />
             <ClickToTop>
-            <Switch>
-              <Route path="/" exact>
-                <Home />
-              </Route>
-              <Route path="/glogin" exact>
-                <GLogin />
-              </Route>
-              <Route path="/portfolio" exact>
-                <Portfolio />
-              </Route>
-              <Route path="/about" exact>
-                <About />
-              </Route>
-              <Route path="/contact" exact>
-                <Contact />
-              </Route>
-              <Route path="/post/:slug" exact>
-                <BlogDetailsPage />
-              </Route>
-              {/* 
+              <Switch>
+                <Route path="/" exact>
+                  <Home />
+                </Route>
+                <Route path="/glogin" exact>
+                  <GLogin />
+                </Route>
+                <Route path="/portfolio" exact>
+                  <Portfolio />
+                </Route>
+                <Route path="/about" exact>
+                  <About />
+                </Route>
+                <Route path="/contact" exact>
+                  <Contact />
+                </Route>
+                <Route path="/post/:slug" exact>
+                  <BlogDetailsPage />
+                </Route>
+                {/* 
               <Route path="/category/:slug" exact>
                 <CategoryPost />
               </Route> 
               */}
-              <Route path="/products/:handle" exact>
-                <ParentProductPage />
-              </Route>
-              <Route path="/post/" exact>
-                <AllPosts />
-              </Route>
-              <Route path="/shop" exact>
-                <MainShop />
-              </Route>
-              <Route path="/sacheushop" exact>
-                <SacheuShopProducts />
-              </Route>
-              <Route path="/doc" exact>
-                <Documentation />
-              </Route>
-              {/* <Route path="/loginhome" exact>
+                <Route path="/products/:handle" exact>
+                  <ParentProductPage />
+                </Route>
+                <Route path="/post/" exact>
+                  <AllPosts />
+                </Route>
+                <Route path="/shop" exact>
+                  <MainShop />
+                </Route>
+                <Route path="/sacheushop" exact>
+                  <SacheuShopProducts />
+                </Route>
+                <Route path="/doc" exact>
+                  <Documentation />
+                </Route>
+                {/* <Route path="/loginhome" exact>
                   <LoginHome />
                 </Route>
                 <PublicRoute path="/loginform" exact>
@@ -133,12 +133,12 @@ function App() {
                 <PrivateRoute path="/logindashboard" exact>
                   <LoginDashboard />
                 </PrivateRoute> */}
-              <Route path="" component={NotFound} />
-            </Switch>
+                <Route path="" component={NotFound} />
+              </Switch>
             </ClickToTop>
             <Footer />
           </Router>
-          
+
         </Suspense>
       )}
     </div>

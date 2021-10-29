@@ -82,7 +82,7 @@ const HomeContact = () => {
                                 <div className="contact-method">
                                     {/* <span className="icon solid alt fa-envelope-square"></span> */}
                                     <i className="footericon fa fa-envelope"></i>
-                                    <h3 className="animate__animated animate__fadeInUp">Email</h3>
+                                    <h3 data-tip="Email" className="animate__animated animate__fadeInUp">Email</h3>
                                     <a target="_blank" href="mailto:&#104;&#097;&#114;&#100;&#105;&#107;&#046;&#100;&#101;&#118;&#097;&#110;&#105;&#064;&#097;&#117;&#114;&#101;&#097;&#116;&#101;&#108;&#097;&#098;&#115;&#046;&#099;&#111;&#109;" className="animate__animated animate__slideInDown" style={{ borderBottom: 'none' }}>&#104;&#097;&#114;&#100;&#105;&#107;&#046;&#100;&#101;&#118;&#097;&#110;&#105;&#064;&#097;&#117;&#114;&#101;&#097;&#116;&#101;&#108;&#097;&#098;&#115;&#046;&#099;&#111;&#109;</a>
                                 </div>
                             </section>
@@ -93,6 +93,7 @@ const HomeContact = () => {
                                     <h3 className="animate__animated animate__fadeInUp">Phone</h3>
                                     <span className="animate__animated animate__slideInDown"><a href="tel:+919825457037" style={{ borderBottom: 'none' }}>(+91) 982-245-7037</a></span>
                                 </div>
+                                    
                             </section>
                             <section>
                                 <div className="contact-method">

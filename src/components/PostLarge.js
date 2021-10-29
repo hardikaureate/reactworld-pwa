@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import allblog from '../blogdata/blog.json'
 import Sidebar from './Sidebar'
@@ -46,7 +46,7 @@ const PostLarge = () => {
                                                         </div>
                                                     </div>
                                                     <div className="blogshortcont">
-                                                        <content class="" dangerouslySetInnerHTML={{ __html: items.blogText }}></content>
+                                                            <content class="" dangerouslySetInnerHTML={{ __html: items.blogText }}></content>
                                                     </div>
                                                 </div>
                                             </>
@@ -62,4 +62,4 @@ const PostLarge = () => {
         </>
     )
 }
-export default PostLarge
+export default PostLarge;

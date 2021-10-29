@@ -10,7 +10,7 @@ export default function BlogDetailsPage() {
         post = findPostBySlug(slug)
     //console.log(post)
     const { blogCategory, blogTitle, postedOn, author, blogImage, blogText } = post
-    localStorage.setItem("BlogDetailsPage",JSON.stringify(post))
+    localStorage.setItem("BlogDetailsPage", JSON.stringify(post))
     var myvariable = post.blogImage
     var divStyle = {
         backgroundImage: 'url(/' + myvariable + ')',
@@ -18,6 +18,7 @@ export default function BlogDetailsPage() {
     window.onbeforeunload = function () {
         window.scrollTo(0, 0)
     }
+    
     return (
         <div>
             <div id="wrapper">
@@ -41,7 +42,6 @@ export default function BlogDetailsPage() {
                         <div class="row">
                             <div class="col-9 col-12-small">
                                 <div className="post-content-view">
-
                                     <div className="postImage">
                                         <img src={`/${blogImage}`} alt={blogImage} />
                                     </div>

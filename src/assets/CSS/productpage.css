@@ -507,3 +507,7 @@ img.prodmetaImages {
     object-fit: cover;
     vertical-align: middle;
 }
+
+.inner.pdppage {
+    padding-top: 0 !important;
+}

@@ -6,6 +6,7 @@ import './relatedproduct.css'
 import Slider from "react-slick"
 import Skeleton from 'react-loading-skeleton'
 import { ShopContext } from "../../context/ShopContext"
+import ReactTooltip from "react-tooltip";
 
 const PDPRelatedProduct = (props) => {
 
@@ -76,10 +77,11 @@ const PDPRelatedProduct = (props) => {
                           </Link>
                         </div>
                         <div className="productInfo">
-                          <Link to={`/products/${product.handle}`}>
+                          <Link to={`/products/${product.handle}`} data-tip="Product">
                             {loading && <Skeleton height={30} />}
                             {!loading && <h3 className="itemName">{product.title}</h3>}
                           </Link>
+                          <ReactTooltip globalEventOff="click" />
                           <p className="relatedProPrice">
                             {loading ? <Skeleton height={30} /> : `${product.variants[0].price}`}
                           </p>

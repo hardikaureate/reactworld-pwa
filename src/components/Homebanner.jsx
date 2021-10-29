@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "react-router-dom"
 //import HomeContact from './HomeContact'
 //import InnerMenu from './InnerMenu'
+import ReactTooltip from "react-tooltip";
 
 const Homebanner = () => {
     return (
@@ -24,9 +25,10 @@ const Homebanner = () => {
                                 <li>
                                     <Link
                                         to="/about"
-                                        className="button next scrolly animate__zoomIn animate__animated">
+                                        className="button next scrolly animate__zoomIn animate__animated" data-tip="Go to Contact">
                                         Get Started
                                     </Link>
+                                    <ReactTooltip globalEventOff="click" />
                                 </li>
                             </ul>
                         </div>
