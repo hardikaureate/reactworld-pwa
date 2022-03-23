@@ -1,0 +1,91 @@
+[
+{
+    "userId": 1,
+    "id": "1",
+    "name": "Hardik Devani",
+    "email": "hardikdevani@gmail.com",
+    "website": "https://www.youtube.com/",
+    "mobile": "9825457037",
+    "image": "https://images.pexels.com/photos/2065194/pexels-photo-2065194.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "description": "quia et suscipit\nsuscipit recusandae consequuntur expedita et cum\nreprehenderit molestiae ut ut quas totam\nnostrum rerum est autem sunt rem eveniet architecto"
+},
+{
+    "userId": 2,
+    "id": "2",
+    "name": "Dharmesh Patel",
+    "email": "ddpatel90@gmail.com",
+    "website": "https://www.youtube.com/",
+    "mobile": "9685741020",
+    "image": "https://images.pexels.com/photos/10116717/pexels-photo-10116717.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "description": "est rerum tempore vitae\nsequi sint nihil reprehenderit dolor beatae ea dolores neque\nfugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis\nqui aperiam non debitis possimus qui neque nisi nulla"
+},
+{
+    "userId": 3,
+    "id": "3",
+    "name": "Lalsinh Bahadur",
+    "email": "healthfitness@young.com",
+    "website": "https://www.youtube.com/",
+    "mobile": "9974852145",
+    "image": "https://images.pexels.com/photos/9408410/pexels-photo-9408410.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "description": "et iusto sed quo iure\nvoluptatem occaecati omnis eligendi aut ad\nvoluptatem doloribus vel accusantium quis pariatur\nmolestiae porro eius odio et labore et velit aut"
+},
+{
+    "userId": 4,
+    "id": "4",
+    "name": "vinod Joshi",
+    "email": "vinodjosh@ymail.com",
+    "website": "https://www.youtube.com/",
+    "mobile": "8866451023",
+    "image": "https://images.pexels.com/photos/11428507/pexels-photo-11428507.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "description": "ullam et saepe reiciendis voluptatem adipisci\nsit amet autem assumenda provident rerum culpa\nquis hic commodi nesciunt rem tenetur doloremque ipsam iure\nquis sunt voluptatem rerum illo velit"
+},
+{
+    "userId": 5,
+    "id": "5",
+    "name": "Krunal Shah",
+    "email": "shahkrunal@gmail.com",
+    "website": "https://www.youtube.com/",
+    "mobile": "9845785623",
+    "image": "https://images.pexels.com/photos/5213430/pexels-photo-5213430.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "description": "repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque"
+},
+{
+    "userId": 6,
+    "id": "6",
+    "name": "Rakesh Pundit",
+    "email": "rkjoshi@gmail.com",
+    "website": "https://www.youtube.com/",
+    "mobile": "9685214056",
+    "image": "https://images.pexels.com/photos/11524597/pexels-photo-11524597.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "description": "ut aspernatur corporis harum nihil quis provident sequi\nmollitia nobis aliquid molestiae\nperspiciatis et ea nemo ab reprehenderit accusantium quas\nvoluptate dolores velit et doloremque molestiae"
+},
+{
+    "userId": 7,
+    "id": "7",
+    "name": "Yogesh Lalwala",
+    "email": "lalwala56@gmail.com",
+    "website": "https://www.youtube.com/",
+    "mobile": "8866445656",
+    "image": "https://images.pexels.com/photos/2131625/pexels-photo-2131625.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "description": "dolore placeat quibusdam ea quo vitae\nmagni quis enim qui quis quo nemo aut saepe\nquidem repellat excepturi ut quia\nsunt ut sequi eos ea sed quas"
+},
+{
+    "userId": 8,
+    "id": "8",
+    "name": "Punit Daruwala",
+    "email": "pdaruwala104@gmail.com",
+    "website": "https://www.youtube.com/",
+    "mobile": "1234567899",
+    "image": "https://images.pexels.com/photos/11192275/pexels-photo-11192275.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    "description": "dignissimos aperiam dolorem qui eum\nfacilis quibusdam animi sint suscipit qui sint possimus cum\nquaerat magni maiores excepturi\nipsam ut commodi dolor voluptatum modi aut vitae"
+},
+{
+    "userId": 9,
+    "id": "9",
+    "name": "Jiyansh Keriwala",
+    "email": "jiyu1720@gmail.com",
+    "website": "https://www.youtube.com/",
+    "mobile": "9685743320",
+    "image": "https://images.pexels.com/photos/10977412/pexels-photo-10977412.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "description": "consectetur animi nesciunt iure dolore\nenim quia ad\nveniam autem ut quam aut nobis\net est aut quod aut provident voluptas autem voluptas"
+}]
